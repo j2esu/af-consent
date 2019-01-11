@@ -22,7 +22,6 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.provider.Settings;
-import android.support.annotation.VisibleForTesting;
 import android.text.TextUtils;
 import android.util.Log;
 import com.google.gson.Gson;
@@ -79,7 +78,7 @@ public class ConsentInformation {
         return instance;
     }
 
-  protected String getHashedDeviceId() {
+  public String getHashedDeviceId() {
         ContentResolver contentResolver = context.getContentResolver();
         String androidId =
             contentResolver == null
@@ -106,7 +105,7 @@ public class ConsentInformation {
         return null;
     }
 
-    @VisibleForTesting
+    //visible for testing
     protected void setHashedDeviceId(String hashedDeviceId) {
         this.hashedDeviceId = hashedDeviceId;
     }
@@ -174,7 +173,7 @@ public class ConsentInformation {
     /**
      * Describes a consent update server response.
      */
-    @VisibleForTesting
+    //visible for testing
     protected static class ServerResponse {
         List<AdProvider> companies;
 
@@ -305,7 +304,7 @@ public class ConsentInformation {
         requestConsentInfoUpdate(publisherIds, MOBILE_ADS_SERVER_URL, listener);
     }
 
-    @VisibleForTesting
+    //visible for testing
     @SuppressWarnings("FutureReturnValueIgnored")
     protected void requestConsentInfoUpdate(String[] publisherIds, String url,
                                             ConsentInfoUpdateListener listener) {

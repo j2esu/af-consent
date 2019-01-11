@@ -17,10 +17,12 @@ package com.google.ads.consent;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Ad provider information.
  */
-public class AdProvider {
+public class AdProvider implements Serializable {
 
     @SerializedName("company_id")
     private String id;
