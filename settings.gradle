@@ -1,2 +1,2 @@
-include ':af-consent'
+include ':lib'
 
