@@ -21,8 +21,8 @@ android {
             consumerProguardFiles 'proguard-rules.pro'
         }
         compileOptions {
-            sourceCompatibility JavaVersion.VERSION_1_7
-            targetCompatibility JavaVersion.VERSION_1_7
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
         }
     }
 
@@ -38,7 +38,7 @@ dependencies {
 ext {
     PUBLISH_GROUP_ID = 'ru.uxapps'
     PUBLISH_ARTIFACT_ID = 'af-consent'
-    PUBLISH_VERSION = '1.0.0'
+    PUBLISH_VERSION = '1.0.1'
 }
 
 //gradlew :af-consent:clean :af-consent:build :af-consent:generateRelease
